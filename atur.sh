@@ -85,7 +85,7 @@ echo -n "Kembali ke menu? [y/n]: ";
 read again;
 while [ $again != 'Y' ] && [ $again != 'y' ] && [ $again != 'N' ] && [ $again != 'n' ];
 do
-echo "Masukkan yang anda masukkan tidak ada di menu";
+echo "Masukkan yang anda pilih tidak ada di menu";
 echo -n "Kembali ke menu? [y/n]: ";
 read again;
 done
