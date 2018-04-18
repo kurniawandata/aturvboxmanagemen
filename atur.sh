@@ -58,9 +58,9 @@ case $choice in
 5)  echo -n "Masukkan nama user: "
     read namauser
     if [ -z "$(ls -l /home/$namauser/VirtualBox\ VMs/testing/*)" ]; then
-    echo "VM-VM tidak ada"
+    echo "VM tidak ada"
     else
-    echo "VM-VM ada dan dihapus semua"
+    echo "VM ada dan dihapus semua"
     sudo rm -r /home/$namauser/VirtualBox\ VMs/*
     fi
     ;;
