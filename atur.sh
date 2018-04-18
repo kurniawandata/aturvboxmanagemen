@@ -5,6 +5,7 @@ do
 clear
 echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+";
 echo " ATUR VBOX BACKUP & RESTORE MANAGEMEN  ";
+echo "           Version 0.1.1               ";
 echo "      Progammer : Kurniawan            ";
 echo "  E-mail : trainingxcode@gmail.com     ";
 echo "                 MENU                  ";
