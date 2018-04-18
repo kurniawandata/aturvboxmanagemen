@@ -57,10 +57,10 @@ case $choice in
     ;;   
 5)  echo -n "Masukkan nama user: "
     read namauser
-    if [ -z "$(ls -l /home/$namauser/VirtualBox\ VMs/testing/*)" ]; then
-    echo "VM tidak ada"
+    if [ -z "$(ls -A /home/$namauser/backupvm/*)" ]; then
+    echo "Tidak ada backup VM, tidak bisa dihapus"
     else
-    echo "VM ada dan dihapus semua"
+    echo "Backup VM ada dan VM dilakukan penghapusan"
     sudo rm -r /home/$namauser/VirtualBox\ VMs/*
     fi
     ;;
