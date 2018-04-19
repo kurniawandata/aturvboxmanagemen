@@ -70,8 +70,12 @@ case $choice in
     if [ -z "$(ls -A /home/$namauser/backupvm/*)" ]; then
     echo "Tidak dapat direstore karena tidak ada backup"
     else
-    echo "Restore dilakukan"
-    sudo cp -ar /home/$namauser/backupvm/* /home/$namauser/VirtualBox\ VMs/ 
+	  if [ -z "$(ls -A /home/$namauser/VirtualBox\ VMs/*)" ]; then
+    	  echo "Tidak ada VM maka restore dilakukan"
+          sudo cp -ar /home/$namauser/backupvm/* /home/$namauser/VirtualBox\ VMs/     	     
+	  else
+    	  echo "Masih ada VM tidak bisa direstore, silahkan hapus dulu VM baru direstore (Menu pilihan nomor 5)"
+          fi    
     fi
     ;;   
 7)    exit
