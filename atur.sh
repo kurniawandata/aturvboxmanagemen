@@ -5,7 +5,7 @@ do
 clear
 echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+";
 echo " ATUR VBOX BACKUP & RESTORE MANAGEMEN  ";
-echo "           Version 0.1.2               ";
+echo "           Version 0.1.1               ";
 echo "      Progammer : Kurniawan            ";
 echo "  E-mail : trainingxcode@gmail.com     ";
 echo "                 MENU                  ";
@@ -43,6 +43,7 @@ case $choice in
     echo "VM ada tidak ada"
     else
     echo "VM ada dan backup dilakukan"
+    echo "Backup 100% dilakukan"
     mkdir /home/$namauser/backupvm
     sudo cp -ar /home/$namauser/VirtualBox\ VMs/* /home/$namauser/backupvm
     fi
@@ -66,6 +67,7 @@ case $choice in
     echo "Tidak ada backup VM, tidak bisa dihapus"
     else
     echo "Backup VM ada dan VM dilakukan penghapusan"
+    echo "Penghapusan VM 100% dilakukan"
     sudo rm -r /home/$namauser/VirtualBox\ VMs/*
     fi
     fi
@@ -78,54 +80,7 @@ case $choice in
     else
 	  if [ -z "$(ls -A /home/$namauser/VirtualBox\ VMs/*)" ]; then
     	  echo "Tidak ada VM maka restore dilakukan"
-          sudo cp -ar /home/$namauser/backupvm/* /home/$namauser/VirtualBox\ VMs/     	     
-	  else
-    	  echo "Masih ada VM tidak bisa direstore, silahkan hapus dulu VM baru direstore (Menu pilihan nomor 5)"
-          fi    
-    fi
-    ;;   
-7)    exit
-    ;;
-*)    echo "Maaf, menu tidak ada"
-esac
-echo ""
-echo "ATUR VBOX BACKUP & RESTORE MANAGEMEN"
-echo "Oleh Kurniawan - trainingxcode@gmail.com. xcode.or.id"
-echo ""
-echo -n "Kembali ke menu? [y/n]: ";
-read again;
-while [ $again != 'Y' ] && [ $again != 'y' ] && [ $again != 'N' ] && [ $again != 'n' ];
-do
-echo "Masukkan yang anda pilih tidak ada di menu";
-echo -n "Kembali ke menu? [y/n]: ";
-read again;
-done
-done
-
-    read namauser
-    if [ -z "$(ls -A /home/$namauser/backupvm/*)" ]; then
-    echo "Tidak ada backup"
-    else
-    echo "Backup dihapus"
-    sudo rm -r /home/$namauser/backupvm/* 
-    fi
-    ;;   
-5)  echo -n "Masukkan nama user: "
-    read namauser
-    if [ -z "$(ls -A /home/$namauser/backupvm/*)" ]; then
-    echo "Tidak ada backup VM, tidak bisa dihapus"
-    else
-    echo "Backup VM ada dan VM dilakukan penghapusan"
-    sudo rm -r /home/$namauser/VirtualBox\ VMs/*
-    fi
-    ;;
-6)  echo -n "Masukkan nama user: "
-    read namauser
-    if [ -z "$(ls -A /home/$namauser/backupvm/*)" ]; then
-    echo "Tidak dapat direstore karena tidak ada backup"
-    else
-	  if [ -z "$(ls -A /home/$namauser/VirtualBox\ VMs/*)" ]; then
-    	  echo "Tidak ada VM maka restore dilakukan"
+          echo "Restore VM 100% dilakukan"
           sudo cp -ar /home/$namauser/backupvm/* /home/$namauser/VirtualBox\ VMs/     	     
 	  else
     	  echo "Masih ada VM tidak bisa direstore, silahkan hapus dulu VM baru direstore (Menu pilihan nomor 5)"
