@@ -5,7 +5,7 @@ do
 clear
 echo "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+";
 echo " ATUR VBOX BACKUP & RESTORE MANAGEMEN  ";
-echo "           Version 0.2               ";
+echo "           Version 0.1.1               ";
 echo "      Progammer : Kurniawan            ";
 echo "  E-mail : trainingxcode@gmail.com     ";
 echo "                 MENU                  ";
@@ -84,7 +84,7 @@ case $choice in
           echo "Restore VM 100% telah dilakukan"
           sudo cp -ar /home/$namauser/backupvm/* /home/$namauser/VirtualBox\ VMs/     	     
 	  else
-    	  echo "Masih ada VM tidak bisa direstore, silahkan hapus dulu VM baru direstore (Menu pilihan nomor 5)"
+    	  echo "Masih ada VM tidak bisa direstore, silahkan hapus dulu VM baru direstore (Menu pilihan nomor 5). Jika ingin menimpa pilih pilihan nomor 7."
           fi    
     fi
     ;;   
