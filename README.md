@@ -26,4 +26,4 @@ GNU General Public License
 Progammer:
 ---------- 
 
-Kurniawan. xcode.or.id. E-mail : kurniawan@securityhub.id
+Kurniawan. xcode.or.id. E-mail : kurniawanajazenfone@gmail.com
